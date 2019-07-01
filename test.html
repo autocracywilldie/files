@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="xixi">
+            <input required title="请确保格式一致呢！" pattern="\d+" name="" id="">
+            <input type="date" name="" id="">
+            <input type="datetime" name="" id="">
+            <input type="month" name="" id="">
+            <input type="week" name="" id="">
+            <input type="color" name="" id="">
+            <input type="number" name="" id="">
+            <input type="range" max="100" min="0" step="5" name="" id="">
+            <input type="search" placeholder="search" pattern="123">
+            <input type="tel" placeholder="请输入电话号码" pattern="123">
+            <input type="url">
+            <input type="email">
+        <button type="submit">提交</button>
+    </form>
+    <p contenteditable="">哈哈百年试试</p>
+    <input type="text" autofocus required form="xixi" placeholder="测试关联input">
+    
+    <video height="300" controls>
+        <source src="https://autocracywilldie.github.io/files/videoplayback.mp4#t=60">
+    </video>
+    <script>
+    function success(pos){
+        document.body.append(JSON.stringify(pos))
+    }
+    function error(pos){
+        document.body.append(JSON.stringify(pos))
+    }
+    navigator.geolocation.getCurrentPosition(success,error,{
+        enableHighAccuracy:true,
+        timeout:10000,
+        maximumAge:0
+    })
+    </script>
+</body>
+</html>
