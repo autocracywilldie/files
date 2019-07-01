@@ -30,10 +30,10 @@
     </video>
     <script>
     function success(pos){
-        document.body.append('success',JSON.stringify(pos))
+        document.body.append('success'+JSON.stringify(pos))
     }
     function error(pos){
-        document.body.append('error',JSON.stringify(pos))
+        document.body.append('error'+JSON.stringify(pos))
     }
     navigator.geolocation.getCurrentPosition(success,error,{
         enableHighAccuracy:true,
